@@ -1,5 +1,5 @@
 ### Assets TW Emojis
-For using on custom websites, mail signatures, or whatever.
+Twitter emojis from [https://github.com/jdecked/twemoji](https://github.com/jdecked/twemoji) as svgs, and pngs for using on custom websites, mail signatures, or whatever.
 - [svgs](./tw-emojis-svgs)
 - [pngs](./tw-emojis-pngs)
 TODO: I used Inkscape CLI to render the pngs from the svgs. But they rendered at 36x36. Now I've got to do it again to 128x128, which is better for emojis.

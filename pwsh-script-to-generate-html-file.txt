@@ -1,73 +1,39 @@
-# Defineix la ruta a la carpeta assets
-$assetsPath = "tw-emojis-pngs" # ONLY CHANGE THIS AND RUN THIS SCRIPT FROM POWERSHELL TERMINAL IN THE PARENT DIRECTORY
+$assetsPath = "tw-emojis-svgs" # ONLY CHANGE THIS AND RUN THIS SCRIPT FROM POWERSHELL TERMINAL IN THE PARENT DIRECTORY
 $indexFile = Join-Path $assetsPath "index.html"
 
-# Extensions acceptades
 $imageExt = @(".png", ".jpg", ".jpeg", ".svg")
 $videoExt = @(".mp4")
 
-# Llegeix fitxers
 $allFiles = Get-ChildItem -Path $assetsPath -File
 
-# Separa imatges i vídeos
 $imageFiles = $allFiles | Where-Object { $imageExt -contains $_.Extension.ToLower() }
 $videoFiles = $allFiles | Where-Object { $videoExt -contains $_.Extension.ToLower() }
 
-# Comença a escriure l'HTML
 $htmlContent = @"
 <!DOCTYPE html>
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
-    <title>Index de fitxers multimèdia</title>
+    <title>Media files index</title>
     <style>
         body { font-family: sans-serif; padding: 20px; }
         ul { list-style: none; padding-left: 0; }
         li { margin: 8px 0; }
         .emoji { width: 24px; height: 24px; vertical-align: middle; margin-left: 8px; }
-        .video-thumb { width: 40px; height: 24px; vertical-align: middle; margin-left: 8px; object-fit: cover; }
-        .gallery, .video-gallery { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; }
-        .gallery img { width: 64px; }
-        .video-gallery video { width: 200px; height: auto; }
+        .video-thumb { width: 80px; height: 48px; vertical-align: middle; margin-left: 8px; object-fit: cover; }
     </style>
 </head>
 <body>
-    <h1>Llistat de fitxers multimèdia</h1>
+    <h1>Media files list</h1>
     <ul>
 "@
 
-# Afegeix imatges amb miniatura
 foreach ($file in $imageFiles) {
     $htmlContent += "        <li><a href='$($file.Name)'>$($file.Name)</a><img src='$($file.Name)' class='emoji' alt='emoji'></li>`n"
 }
 
-# Afegeix vídeos amb miniatura estilitzada (sense controls)
 foreach ($file in $videoFiles) {
     $htmlContent += "        <li><a href='$($file.Name)'>$($file.Name)</a><video src='$($file.Name)' class='video-thumb' muted loop playsinline></video></li>`n"
-}
-
-# Galeria d’imatges
-$htmlContent += @"
-    </ul>
-
-    <h2>Galeria d’emojis</h2>
-    <div class="gallery">
-"@
-
-foreach ($file in $imageFiles) {
-    $htmlContent += "        <img src='$($file.Name)' alt='$($file.BaseName)'>`n"
-}
-
-# Galeria de vídeos
-$htmlContent += @"
-    </div>
-
-    <h2>Galeria de vídeos</h2>
-    <div class="video-gallery">
-"@
-
-foreach ($file in $videoFiles) {
-    $htmlContent += "        <video src='$($file.Name)' controls></video>`n"
 }
 
 $htmlContent += @"
@@ -76,7 +42,6 @@ $htmlContent += @"
 </html>
 "@
 
-# Escriu el fitxer HTML
 $htmlContent | Set-Content -Encoding UTF8 $indexFile
 
-Write-Host "S'ha generat l'index.html amb $($imageFiles.Count) imatge(s) i $($videoFiles.Count) vídeo(s)."
+Write-Host "index.html generated with $($imageFiles.Count) images and $($videoFiles.Count) videos."

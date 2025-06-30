@@ -4,4 +4,4 @@ For using on custom websites, mail signatures, or whatever.
 - [pngs](https://mapaor.github.io/tw-emojis/tw-emojis-pngs)
 TODO: I used Inkscape CLI to render the pngs from the svgs. But they rendered at 36x36. Now I've got to do it again to 128x128, which is better for emojis.
 ### Sample Videos
-Maybe you're also interested in sample video URL mp4 files: [https://github.com/Mapaor/sample-videos](https://github.com/Mapaor/sample-videos)
+Maybe you're also interested in sample videos as URL mp4 files: [https://github.com/Mapaor/sample-videos](https://github.com/Mapaor/sample-videos)

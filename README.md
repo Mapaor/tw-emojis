@@ -9,6 +9,7 @@ I used Inkscape CLI to render the pngs from the svgs.
   
 <summary>How to do it</summary>
 
+Note: this is only displayed properly in the markdown file, not in the github pages version of the markdown file.
 
 ### Install Inkscape and add it to PATH
 
@@ -27,7 +28,7 @@ I used Inkscape CLI to render the pngs from the svgs.
    5. Close the terminal, open a new one and check again with `inkscape --version`. It should return something like `Inkscape 1.3.2 (091e20e, 2023-11-25, custom)`.
 
 
-### Use Inkscape CLI
+#### Use Inkscape CLI
 For example to render an individual file we would do:
 
 ```
@@ -82,7 +83,7 @@ Write-Host "`n✅ Done! Converted $counter SVG files to PNGs in '$outputDir'."
 
 </details>
 
-### Optional
+#### Optional
 Use [jsDelivr](https://www.jsdelivr.com/) for faster delivering across the world. For example:
 - Instead of [https://mapaor.github.io/tw-emojis/tw-emojis-svgs/1f004.svg](https://mapaor.github.io/tw-emojis/tw-emojis-svgs/1f004.svg) use [https://cdn.jsdelivr.net/gh/mapaor/tw-emojis/tw-emojis-svgs/1f004.svg](https://cdn.jsdelivr.net/gh/mapaor/tw-emojis/tw-emojis-svgs/1f004.svg).
 - Instead of [https://mapaor.github.io/tw-emojis/tw-emojis-pngs/1f004.png](https://mapaor.github.io/tw-emojis/tw-emojis-pngs/1f004.png) use [https://cdn.jsdelivr.net/gh/mapaor/tw-emojis/tw-emojis-pngs/1f004.png](https://cdn.jsdelivr.net/gh/mapaor/tw-emojis/tw-emojis-pngs/1f004.png)

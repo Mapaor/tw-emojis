@@ -39,6 +39,7 @@ Get-ChildItem "$inputDir\*.svg" | ForEach-Object {
 }
 ```
 </details>
+
 ### Optional
 Use [jsDelivr](https://www.jsdelivr.com/) for faster delivering across the world. For example:
 - Instead of [https://mapaor.github.io/tw-emojis/tw-emojis-svgs/1f004.svg](https://mapaor.github.io/tw-emojis/tw-emojis-svgs/1f004.svg) use [https://cdn.jsdelivr.net/gh/mapaor/tw-emojis/tw-emojis-svgs/1f004.svg](https://cdn.jsdelivr.net/gh/mapaor/tw-emojis/tw-emojis-svgs/1f004.svg).

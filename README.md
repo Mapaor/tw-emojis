@@ -12,12 +12,14 @@ I used Inkscape CLI to render the pngs from the svgs.
 1. To install Inkscape, simply download the Inkscape app (GUI) from [https://inkscape.org/release/](https://inkscape.org/release/).
 2. Inkscape CLI would be automatically installed but probably won't be added to PATH.
    1. Check if is added to PATH with:
+      
       ```
       inkscape --version
       ```
+      
       If it does not return the version it is not added to PATH.
-   2. To add it to PATH for Windows, first do Win+R and type `C:\Program Files\Inkscape\bin`. Check there is an executable `inkscape.exe`.
-   3. If there is great, we'll add it by searching (in the windows search) 'system environment variables' > 'environment variables' > 'system variables' > 'Path' > 'Edit' > 'New' > 'C:\Program Files\Inkscape\bin' > 'Accept', 'Accept', 'Accept'.
+   3. To add it to PATH for Windows, first do Win+R and type `C:\Program Files\Inkscape\bin`. Check there is an executable `inkscape.exe`.
+   4. If there is great, we'll add it by searching (in the windows search) 'system environment variables' > 'environment variables' > 'system variables' > 'Path' > 'Edit' > 'New' > 'C:\Program Files\Inkscape\bin' > 'Accept', 'Accept', 'Accept'.
       
 #### Use Inkscape CLI
 For example to render an individual file we would do:

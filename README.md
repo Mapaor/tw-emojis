@@ -10,7 +10,7 @@ I used Inkscape CLI to render the pngs from the svgs.
 <summary>How to do it</summary>
 
 
-#### Install Inkscape and add it to PATH
+### Install Inkscape and add it to PATH
 
 1. To install Inkscape, simply download the Inkscape app (GUI) from [https://inkscape.org/release/](https://inkscape.org/release/).
 2. Inkscape CLI would be automatically installed but probably won't be added to PATH.
@@ -27,7 +27,7 @@ I used Inkscape CLI to render the pngs from the svgs.
    5. Close the terminal, open a new one and check again with `inkscape --version`. It should return something like `Inkscape 1.3.2 (091e20e, 2023-11-25, custom)`.
 
 
-#### Use Inkscape CLI
+### Use Inkscape CLI
 For example to render an individual file we would do:
 
 ```

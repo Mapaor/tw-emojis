@@ -4,6 +4,24 @@ Twitter emojis from [https://github.com/jdecked/twemoji](https://github.com/jdec
 - [pngs 128x128](./tw-emojis-pngs)
 - [pngs 36x36](./tw-emojis-pngs-36x36)
 
+### Tip to use them
+To make it have the same size and alignment as text you can set a custom class like:
+
+```
+.emoji { 
+	width: 24px; 
+	height: 24px; 
+	vertical-align: middle; 
+	margin-left: 4px;
+  margin-right: 4px;
+} 
+```
+
+And then:
+```
+<p>This is a sample text <img src='1f004.png' class='emoji'> that includes an emoji.</p>
+```
+
 ### Tools used
 I used Inkscape CLI to render the pngs from the svgs. 
 <details>

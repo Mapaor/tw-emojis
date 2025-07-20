@@ -9,6 +9,7 @@ I used Inkscape CLI to render the pngs from the svgs.
   
 <summary>How to do it</summary>
 
+
 #### Install Inkscape and add it to PATH
 
 1. To install Inkscape, simply download the Inkscape app (GUI) from [https://inkscape.org/release/](https://inkscape.org/release/).

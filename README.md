@@ -62,10 +62,9 @@ $counter = 0
 foreach ($file in $svgFiles) {
     $counter++
     $filename = $file.BaseName
-    $outputPath = "$outputDir\$filename.png"
 
     inkscape "$($file.FullName)" `
-        --export-filename="$outputPath" `
+        --export-filename="$outputDir\$filename.png" `
         --export-width=128 --export-height=128
 
     Write-Host "[$counter/$total] Converted: $filename.svg -> $filename.png"

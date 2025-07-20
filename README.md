@@ -17,9 +17,10 @@ I used Inkscape CLI to render the pngs from the svgs.
       inkscape --version
       ```
       
-      If it does not return the version it is not added to PATH.
+      If it does not return a version number it means Inkscape is not added to PATH.
    3. To add it to PATH for Windows, first do Win+R and type `C:\Program Files\Inkscape\bin`. Check there is an executable `inkscape.exe`.
    4. If there is great, we'll add it by searching (in the windows search) 'system environment variables' > 'environment variables' > 'system variables' > 'Path' > 'Edit' > 'New' > 'C:\Program Files\Inkscape\bin' > 'Accept', 'Accept', 'Accept'.
+   5. Close the terminal, open a new one and check again with `inkscape --version`. It should return something like `Inkscape 1.3.2 (091e20e, 2023-11-25, custom)`.
       
 #### Use Inkscape CLI
 For example to render an individual file we would do:

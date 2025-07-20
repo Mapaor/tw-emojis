@@ -1,7 +1,8 @@
 ### Assets TW Emojis
 Twitter emojis from [https://github.com/jdecked/twemoji](https://github.com/jdecked/twemoji) as svgs, and pngs for using on custom websites, mail signatures, or whatever.
 - [svgs](./tw-emojis-svgs)
-- [pngs](./tw-emojis-pngs)
+- [pngs 128x128](./tw-emojis-pngs)
+- [pngs 36x36](./tw-emojis-pngs-36x36)
 
 ### Tools used
 I used Inkscape CLI to render the pngs from the svgs. 

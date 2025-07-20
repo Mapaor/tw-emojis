@@ -28,6 +28,11 @@ For example to render an individual file we would do:
 inkscape input.svg --export-filename=output.png --export-width=128 --export-height=128
 ```
 And the powershell script used for this repo was:
+
+<details>
+
+  <summary>Simpler version</summary>
+
 ```
 $inputDir = "tw-emojis-svgs"
 $outputDir = "tw-emojis-pngs"
@@ -41,6 +46,34 @@ Get-ChildItem "$inputDir\*.svg" | ForEach-Object {
         --export-width=128 --export-height=128
 }
 ```
+
+</details>
+
+```
+$inputDir = "tw-emojis-svgs"
+$outputDir = "tw-emojis-pngs"
+
+New-Item -ItemType Directory -Force -Path $outputDir | Out-Null
+
+$svgFiles = Get-ChildItem "$inputDir\*.svg"
+$total = $svgFiles.Count
+$counter = 0
+
+foreach ($file in $svgFiles) {
+    $counter++
+    $filename = $file.BaseName
+    $outputPath = "$outputDir\$filename.png"
+
+    inkscape "$($file.FullName)" `
+        --export-filename="$outputPath" `
+        --export-width=128 --export-height=128
+
+    Write-Host "[$counter/$total] Converted: $filename.svg -> $filename.png"
+}
+
+Write-Host "`n✅ Done! Converted $counter SVG files to PNGs in '$outputDir'."
+```
+
 </details>
 
 ### Optional

@@ -109,3 +109,9 @@ And then:
 
 ### Sample Videos
 Maybe you're also interested in sample videos as URL mp4 files: [https://github.com/Mapaor/sample-videos](https://github.com/Mapaor/sample-videos)
+
+### Attribution
+```
+Emoji graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Copyright 2019 Twitter, Inc and other contributors
+```
